@@ -1,0 +1,13 @@
+<!-- <%= @postings %> -->
+<!-- this will just post the text of the array -->
+
+<!-- for a template, did you mean a better way to represent the data, more like below -->
+<br>
+<h2> Job posts </h2>
+<% @postings.each do |post| %>
+
+  <strong> <%= post[:company] %> </strong><br>
+  <%= post[:position] %>,
+  <em><%= post[:location] %></em>
+  <br><br>
+<% end %>
